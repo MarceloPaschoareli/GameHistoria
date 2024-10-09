@@ -78,6 +78,7 @@ body{
     height: 90%;
     background-color: #2F4319ED;
     height: 40vh;
+    cursor: pointer;
 }
 
 .card-txt{
