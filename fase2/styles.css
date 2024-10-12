@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../image/Capa_fase1.png);
+    background-size: cover;
+}
+
+.barra-fase1{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 10px;
+}
+
+.barra-fase1 > img{
+    width: 90%;
+}
+
+#game-container {
+    width: 85%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#timeline {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.timeline-slot {
+    width: 100px;
+    height: 50px;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+#cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: grab;
+    transition: background-color 0.3s;
+}
+
+.card.correct {
+    background-color: #28a745;
+}
+
+.card.wrong {
+    background-color: #dc3545;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 1.2em;
+}

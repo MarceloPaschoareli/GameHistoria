@@ -1,0 +1,8 @@
+*{
+    font-family: 'Monocraft';
+}
+
+@font-face {
+    font-family: 'Monocraft';
+    src: url(Monocraft.otf);
+}

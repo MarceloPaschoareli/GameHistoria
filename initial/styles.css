@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+.background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../image/capa.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+}
+
+.comecar{
+    width: 130px;
+    height: 70px;
+    background: radial-gradient(#D45050, #6E2A2A);
+    border: 2px solid #1E1E1E;
+    border-radius: 15px;
+    margin-top: 250px;
+}
+
+.comecar:hover{
+    background: radial-gradient(#9a3a3a, #522020);
+}
+
+.comecar:active{
+    background: radial-gradient(#7a2f2f, #421a1a);
+}
+
+.comecar-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
