@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../image/Capa_fase1.png);
+    background-size: cover;
+}
+
+.barra-fase3{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 10px;
+}
+
+.barra-fase3 > img{
+    width: 90%;
+}
+
+.card-imagem{
+    /* grid-area: "imagem"; */
+    grid-area: 0/2/2/1;
+
+}
+.pergunta{
+    grid-area: 0/2/4/1;
+
+}
+.resposta{
+    grid-area: 2/2/3/3;
+}
+
+.container{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    /* grid-template-areas: 
+    "imagem" "imagem" "pergunt" "pergunt"
+    "imagem imagem resp resp" 
+    "imagem imagem resp resp"; */
+}
