@@ -13,6 +13,11 @@ slots.forEach(slot => {
     slot.addEventListener('drop', drop);
 });
 
+
+if (draggedItemsCount === 4) {
+    window.location.href = '../fase3/index.html';
+}
+
 function dragStart(e) {
     e.dataTransfer.setData('text/plain', e.target.dataset.year);
     e.dataTransfer.setData('text/html', e.target.outerHTML);
