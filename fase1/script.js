@@ -20,8 +20,11 @@ const questions = [
         answer: 2
     },
     {
-        question: "Em que país ocorreu o desembarque do Dia D, onde as forças aliadas invadiram para libertar a Europa Ocidental?",
-        options: ["Itália", "França", "Bélgica", "Noruega"],
+        question: "Como a Segunda Guerra Mundial impactou a pirâmide etária dos países envolvidos?",
+        options: ["Aumento da população idosa devido à baixa natalidade", 
+            "Diminuição da população jovem masculina por causa das baixas na guerra", 
+            "Crescimento da população infantil por políticas de incentivo à natalidade", 
+            "Estabilização demográfica devido à imigração"],
         answer: 1
     }
 ];

@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.card');
 const slots = document.querySelectorAll('.timeline-slot');
 const scoreElement = document.getElementById('score');
+const draggedItemsCount = 0;
 let score = 0;
 
 cards.forEach(card => {
@@ -20,25 +21,37 @@ function dragStart(e) {
 
 function dragOver(e) {
     e.preventDefault();
+    const slot = e.target;
+    if (!slot.querySelector('.card')) {
+        e.dataTransfer.dropEffect = 'move';
+    } else {
+        e.dataTransfer.dropEffect = 'none';
+    }
 }
 
 function drop(e) {
     e.preventDefault();
     const draggedYear = e.dataTransfer.getData('text/plain');
     const draggedHTML = e.dataTransfer.getData('text/html');
-    const slotYear = e.target.dataset.year;
+    const slot = e.target;
+    const slotYear = slot.dataset.year;
 
-    if (draggedYear === slotYear) {
-        e.target.innerHTML = draggedHTML;
-        e.target.firstChild.classList.add('correct');
-        score++;
-    } else {
+    if (!slot.querySelector('.card')) {
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = draggedHTML;
         const card = tempDiv.firstChild;
-        card.classList.add('wrong');
-        e.target.appendChild(card);
-    }
+        card.classList.remove('dragging');
+        card.setAttribute('draggable', 'false');
 
-    scoreElement.innerText = `Pontuação: ${score}`;
+        if (draggedYear === slotYear) {
+            card.classList.add('correct');
+            score++;
+        } else {
+            card.classList.add('wrong');
+        }
+
+        slot.appendChild(card);
+        scoreElement.innerText = `Pontuação: ${score}`;
+    }
+    draggedItemsCount++;
 }
