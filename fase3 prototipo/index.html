@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 3 - Caça Palavras</title>
+    <link rel="stylesheet" href="../font/font.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="barra-fase3">
+        <img src="../image/barra_fase3.png" alt="">
+    </div>
+
+    <container>
+        <br><br><br><br><br>
+
+        <div class="absolute-container">
+            <div class="inputs">
+                <div class="question-container">
+                    <label for="question-1"> 1 -
+                        <input type="text" id="question-1" placeholder="6 dígitos">
+                    </label>
+                </div>
+
+                <br>
+                <div class="question-container">
+                    <label for="question-2"> 2 -
+                        <input type="text" id="question-2" placeholder="6 dígitos">
+                    </label>
+                </div>
+
+                <br>
+                <div class="question-container">
+                    <label for="question-3"> 3 -
+                        <input type="text" id="question-3" placeholder="8 dígitos">
+                    </label>
+                </div>
+
+                <br>
+                <div class="question-container">
+                    <label for="question-4"> 4 -
+                        <input type="text" id="question-4" placeholder="9 dígitos">
+                    </label>
+                </div>
+
+                <br>
+                <div class="question-container">
+                    <label for="question-5"> 5 -
+                        <input type="text" id="question-5" placeholder="6 dígitos">
+                    </label>
+                </div>
+
+                <br>
+                <div class="question-container">
+                    <label for="question-6"> 6 -
+                        <input type="text" id="question-6" placeholder="9 dígitos">
+                    </label>
+                </div>
+                <br>
+                <button onclick="verificar()">Verificar</button>
+            </div>
+            
+            <div class="dicas-container">
+                <div class="dicas-txt">
+                    <h2>Dicas:</h2>
+                    <p>
+                        1 - Máquina usada pelos alemães para codificar mensagens. <br><br>
+                        2 - Líder da Alemanha Nazista durante a Segunda Guerra Mundial. <br><br>
+                        3 -  Ideologia política que liderou a Itália sob Mussolini. <br><br>
+                        4 - Cidade japonesa bombardeada com a primeira bomba atômica. <br><br>
+                        5 - Meio de transporte aéreo utilizado em ataques e bombardeios. <br><br>
+                        6 - Líder da Itália durante a Segunda Guerra Mundial.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p id="result" style="border-radius: 5px; font-weight: bold;"></p>
+
+    </container>
+
+    <script src="script.js"></script>
+</body>
+</html>
