@@ -1,8 +1,8 @@
 const cards = document.querySelectorAll('.card');
 const slots = document.querySelectorAll('.timeline-slot');
 const scoreElement = document.getElementById('score');
-const draggedItemsCount = 0;
 let score = 0;
+let tries = 0;
 
 cards.forEach(card => {
     card.addEventListener('dragstart', dragStart);
@@ -12,11 +12,6 @@ slots.forEach(slot => {
     slot.addEventListener('dragover', dragOver);
     slot.addEventListener('drop', drop);
 });
-
-
-if (draggedItemsCount === 4) {
-    window.location.href = '../fase3/index.html';
-}
 
 function dragStart(e) {
     e.dataTransfer.setData('text/plain', e.target.dataset.year);
@@ -54,9 +49,16 @@ function drop(e) {
         } else {
             card.classList.add('wrong');
         }
+        tries++;
 
         slot.appendChild(card);
         scoreElement.innerText = `Pontuação: ${score}`;
+
+        // Verifica se foram feitas quatro tentativas
+        if (tries === 4) {
+            setTimeout(() => {
+                window.location.replace('../fase3/index.html'); // Substitua pela URL desejada
+            }, 1000);
+        }
     }
-    draggedItemsCount++;
 }
