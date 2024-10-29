@@ -36,7 +36,6 @@ function loadQuestion() {
         button.textContent = question.options[index];
     });
     document.getElementById('result').textContent = '';
-    document.getElementById('next-button').style.display = 'none';
 }
 
 function checkAnswer(selectedOption) {
@@ -58,17 +57,19 @@ function checkAnswer(selectedOption) {
 
     setTimeout(() => {document.getElementById('result').style.backgroundColor = '#d9d9d9ac';
     }, 999)
-    document.getElementById('next-button').style.display = 'block';
 }
 
 
 function nextQuestion() {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex != questions.length) {
         loadQuestion();
     } else {
-        document.getElementById('result').textContent = 'Você completou o jogo!';
-        document.getElementById('next-button').style.display = 'none';
+        document.getElementById('result').style.padding = '10px';
+        document.getElementById('result').textContent = 'Você completou a fase 4! Redirecionando...';
+        setTimeout(() => {
+            window.location.replace('../initial/fases/yhbv_redirect.html')
+        }, 5000);
     }
 }
 

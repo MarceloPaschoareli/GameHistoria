@@ -70,7 +70,7 @@ function checkAnswer(selectedIndex, optionDiv) {
             currentQuestion++;
             loadQuestion();
         }else{
-            window.location.replace('../fase2/index.html'); // Substitua 'proxima_fase.html' pela URL da página desejada
+            window.location.replace('../initial/fases/fpoikl_redirect.html'); // Substitua 'proxima_fase.html' pela URL da página desejada
         }
 
     }, 1000);

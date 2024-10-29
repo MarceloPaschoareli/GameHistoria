@@ -57,7 +57,7 @@ function drop(e) {
         // Verifica se foram feitas quatro tentativas
         if (tries === 4) {
             setTimeout(() => {
-                window.location.replace('../fase3/index.html'); // Substitua pela URL desejada
+                window.location.replace('../initial/fases/ddpg_redirecionar.html'); // Substitua pela URL desejada
             }, 1000);
         }
     }

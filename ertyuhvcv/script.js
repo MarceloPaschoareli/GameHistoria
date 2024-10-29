@@ -68,7 +68,7 @@ function verificar() {
 
     if (allCorrect) {
         setTimeout(() => {
-            window.location.replace('../fase4/index.html');
+            window.location.replace('../initial/fases/ytrfcvbn_redirect.html');
         }, 5000);
         
         document.getElementById('result').style.backgroundColor = '#d9d9d9ac';
