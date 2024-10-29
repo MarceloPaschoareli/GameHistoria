@@ -54,7 +54,7 @@ function drop(e) {
         slot.appendChild(card);
         scoreElement.innerText = `Pontuação: ${score}`;
 
-        // Verifica se foram feitas quatro tentativas
+        // Verifica se foram feitas seis tentativas
         if (tries === 6) {
             setTimeout(() => {
                 window.location.replace('../initial/fases/ddpg_redirecionar.html'); // Substitua pela URL desejada

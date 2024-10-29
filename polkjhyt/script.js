@@ -67,7 +67,7 @@ function nextQuestion() {
     } else {
         document.getElementById('result').style.padding = '10px';
         document.getElementById('result').textContent = 'Você completou o jogo!';
-        setTimeout(() => {window.location.replace('../grand_finale.html')}, 5000);
+        window.location.replace('../grand_finale.html')
     }
 }
 
