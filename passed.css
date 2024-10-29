@@ -1,0 +1,11 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    width: 100vw;
+    background-image: url(image/mission_passed.jpg);
+    background-position: cover;
+    background-repeat: no-repeat;
+}

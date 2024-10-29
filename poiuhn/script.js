@@ -55,7 +55,7 @@ function drop(e) {
         scoreElement.innerText = `Pontuação: ${score}`;
 
         // Verifica se foram feitas quatro tentativas
-        if (tries === 4) {
+        if (tries === 6) {
             setTimeout(() => {
                 window.location.replace('../initial/fases/ddpg_redirecionar.html'); // Substitua pela URL desejada
             }, 1000);
