@@ -61,14 +61,32 @@ h1{
 }
 
 .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 150px;
     padding: 10px;
     margin: 10px;
-    background-color: #2F4319;
+    /* background-color: #2F4319; */
+    background-color: #FFAA00;
     color: white;
     border-radius: 5px;
     cursor: grab;
     transition: background-color 0.3s;
+    padding: 10px;
+}
+
+.card-outline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.83);
+    padding: 10px;
 }
 
 .card.correct {
